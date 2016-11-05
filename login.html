@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <!--Stylesheets-->
+    <link href="lib/bootstrap/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/toastr/build/toastr.css" rel="stylesheet">
+    <link href="lib/style.css" rel="stylesheet">
+
+
+    <!--javascript libraries-->
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/jquery-ui.js"></script>
+    <script src="lib/toastr/toastr.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+    
+
+
+    <link href="lib/jquery-ui.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="loginPage" >
+        <div id="loginForm" class="form-group">
+            <img class="img-responsive" src="msAssets/csLogo.png" id="loginLogo">
+            <input type="email" class="loginForm" id="formEmail" placeholder="Email Address">
+            <br>
+            <input type="password" class="loginForm" id="formPass" placeholder="•••••••••••••••">
+            <br>
+            <button type="button" class="btn btn-success" id="loginButton">
+                <span>Login</span>
+            </button>
+            <div id="loginAdditional">
+                <a id="regSlide">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="regPage" style="display:none;" >
+        <div id="regForm" class="form-group">
+            <span id="regTitle">Registration</span>
+            <br>
+            <input type="text" class="regForm2" id="formFirst" placeholder="First Name">
+            <input type="text" class="regForm2" id="formLast" placeholder="Last Name">
+            <br>
+            <input type="checkbox" id="regCheckForm"> <span id="regCheckLabel">&nbsp;&nbsp;&nbsp;Use an In-Game Name?</span>
+            <br>
+
+            <div class="formRegDiv" id="formignDiv" style="display:none;">
+                <div class="regForm">
+                    <input type="text" class="regFormField" id="formign" placeholder="In-Game Name">
+                </div>
+                <div class="regBubble">
+                    <img class="img-responsive regValid" id="ignNotValid" src="msAssets/misc/form-cross.png" style="display:none;">
+                    <img class="img-responsive regValid" id="ignValid" src="msAssets/misc/form-tick.png" style="display:none;">
+                    <img class="img-responsive regValid" id="ignBlank" src="msAssets/misc/form-blank.png">
+                </div>
+            </div>
+
+            <div class="formRegDiv">
+                <div class="regForm">
+                    <input type="email" id="formEmail1" class="regFormField" placeholder="Email Address">
+                </div>
+                <div class="regBubble">
+                    <img class="img-responsive regValid" id="EmailNotValid" src="msAssets/misc/form-cross.png" style="display:none;">
+                    <img class="img-responsive regValid" id="EmailValid" src="msAssets/misc/form-tick.png" style="display:none;">
+                    <img class="img-responsive regValid" id="EmailBlank" src="msAssets/misc/form-blank.png">
+                </div>
+            </div>
+
+            <div class="formRegDiv">
+                <div class="regForm">
+                    <input type="password" class="regFormField" id="formPass1" placeholder="Password">
+                </div>
+                <div class="regBubble">
+                    <div class="regPassStrength" id="regWeak" style="display:none;z-index:3;"><span>Weak</span></div>
+                    <div class="regPassStrength" id="regGood" style="display:none;z-index:4;">Good</div>
+                    <div class="regPassStrength" id="regStrong" style="display:none;z-index:5;">Strong</div>
+                </div>
+            </div>
+
+            <div class="formRegDiv">
+                <div class="regForm">
+                    <input type="password" class="regFormField" id="formPass2" placeholder="Confirm Password">
+                </div>
+                <div class="regBubble">
+                    <img class="img-responsive regValid" id="cfmPassNotValid" src="msAssets/misc/form-cross.png" style="display:none;">
+                    <img class="img-responsive regValid" id="cfmPassValid" src="msAssets/misc/form-tick.png" style="display:none;">
+                    <img class="img-responsive regValid" id="cfmPassBlank" src="msAssets/misc/form-blank.png">
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-success pull-right" id="loginButton">
+                <span>Character Creation!</span>
+            </button>
+        </div>
+    </div>
+
+
+</body>
+
+<footer>
+    <!--js scripts-->
+    <script src="scripts/login.js"></script>
+    <script src="scripts/reg.js"></script>
+</footer>
+
+</html>

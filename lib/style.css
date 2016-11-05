@@ -1,0 +1,380 @@
+/*
+1. Login Page
+
+
+
+
+
+*/
+
+
+/********************
+0. Overall
+********************/
+
+html,
+body {
+    font-family: 'raleway';
+    font-size: 1vw;
+}
+
+::-webkit-input-placeholder {
+    color: #e74c3c;
+}
+
+::-moz-placeholder {
+    color: #e74c3c;
+}
+
+:-ms-input-placeholder {
+    color: #e74c3c;
+}
+
+:-moz-placeholder {
+    color: #e74c3c;
+}
+
+.topDiv {
+    background-color: #e74c3c;
+    text-align: center;
+    padding: 20px;
+}
+
+.topTitle {
+    font-size: 2vw;
+    color: white;
+    font-weight: bold;
+}
+
+.glyphiconTopLeft {
+    color: white;
+    float: left;
+    font-size: 2vw;
+        margin-top: 6px;
+}
+
+.glyphiconTopRight {
+    color: white;
+    float: right;
+    font-size: 2vw;
+        margin-top: 7px;
+}
+
+
+/********************
+1.1 Login Page
+********************/
+
+#loginPage {
+    background-image: url(../msAssets/bg/loginbg.png);
+    background-size: cover;
+    height: 100%;
+    background-position-x: 100%;
+}
+
+#loginForm {
+    margin: 0px auto;
+    width: 75%;
+    padding-top: 40%;
+}
+
+#loginLogo {
+    margin: 0px auto;
+    height: 320px;
+}
+
+.loginForm {
+    height: 6%;
+    width: 100%;
+    margin: 15px 0px;
+    background: transparent;
+    text-align: center;
+    border: 3px solid white;
+    font-size: 4vw;
+    color: #fff;
+    font-family: 'raleway';
+}
+
+#loginButton {
+    height: 6%;
+    width: 100%;
+    margin: 15px 0px;
+    text-align: center;
+    font-size: 4vw;
+    font-family: 'raleway';
+}
+
+#loginAdditional {
+    font-size: 4vw;
+    color: #fff;
+    text-align: center;
+    font-family: 'raleway';
+    margin-top: 30px;
+}
+
+#loginAdditional > a {
+    color: #fff;
+}
+
+
+/********************
+1.2 Registration Page
+********************/
+
+#regPage {
+    background-image: url(../msAssets/bg/loginbg.png);
+    background-size: cover;
+    height: 100%;
+}
+
+#regForm {
+    margin: 0px auto;
+    height: 100%;
+    padding: 80px;
+}
+
+.regForm {
+    height: 6%;
+    width: 80%;
+    margin: 15px 0px;
+    text-align: left;
+    font-size: 4vw;
+    color: #fff;
+    font-family: 'raleway';
+    float: left;
+}
+
+.regFormField {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 0px 28px;
+    border: 3px solid white;
+    height: 100%;
+    width: 100%;
+    float: left;
+}
+
+.regBubble {
+    width: 20%;
+    height: 6%;
+    float: left;
+    margin: 15px 0px;
+    text-align: center;
+    float: left;
+    font-family: 'raleway';
+}
+
+.regValid {
+    height: 80px;
+    margin: 10px auto;
+}
+
+.regForm2 {
+    height: 6%;
+    width: 100%;
+    margin: 15px 0px;
+    background: rgba(255, 255, 255, 0.3);
+    text-align: left;
+    border: 3px solid white;
+    font-size: 4vw;
+    color: #fff;
+    font-family: 'raleway';
+    padding: 0px 28px;
+}
+
+.formRegDiv {
+    margin-top: 15px;
+}
+
+#regCheckForm {
+    height: 45px;
+    width: 45px;
+    background-color: #ffffff;
+}
+
+#regCheckLabel {
+    font-size: 3vw;
+    vertical-align: text-bottom;
+    color: #ffffff;
+    font-family: 'raleway';
+}
+
+#regTitle {
+    font-size: 6vw;
+    background-color: white;
+}
+
+.regPassStrength {
+    border: 3px solid white;
+    height: 96px;
+    font-size: 5vw;
+    padding: 10px;
+}
+
+
+/********************
+1. Main Page
+********************/
+
+#mstop {
+    background-image: url(../msAssets/bg/bg1.png);
+    height: 34%;
+    background-size: 122%;
+    background-position-x: -200px;
+}
+
+#msbtm {
+    height: 66%;
+}
+
+#appearCue {
+    margin: 50px 0px;
+}
+
+#attackCue {
+    margin: 50px 0px;
+}
+
+#killCue {
+    margin: 50px 0px;
+}
+
+#charDiv {
+    height: 300px;
+    position: absolute;
+    bottom: 12px;
+    left: 37%;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+#mobDiv {
+    height: 250px;
+    position: absolute;
+    bottom: 12px;
+    left: 37%;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+#skillDiv {
+    height: 500px;
+    position: absolute;
+    bottom: -50px;
+    left: 18%;
+}
+
+
+/********************
+2. Add Transaction
+********************/
+
+#transactionKeyboardDiv {
+    padding-top: 20px;
+}
+
+.transactionMainCol {
+    padding: 10px 0px;
+}
+
+.transactionMainText {
+    font-size: 1.5vw;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.transactionKeyboardSymbol {
+    border: 1px solid #c5c5c5;
+    background: #f6f6f6;
+    font-weight: normal;
+    color: #454545;
+    text-align: center;
+    font-size: 1.2vw;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.ui-keyboard-preview-wrapper > input {
+    height: 75px;
+}
+
+.transactionFormField {
+    width: 100%;
+    border: none;
+    color: #e74c3c;
+    font-size: 1.5vw;
+    font-weight: bold;
+    line-height: 58px;
+}
+
+.transactionFormField:focus {
+    border-bottom: 5px solid red;
+    outline: none;
+}
+
+#transactionCatDropdown {
+    background-color: #e74c3c;
+    z-index: 99999;
+    position: absolute;
+    text-align: center;
+    display: none;
+    padding: 20px;
+}
+
+.categoryDropdownDiv {
+    text-align: center;
+    padding: 20px;
+    border-right: 5px solid white;
+    border-bottom: 5px solid white;
+    cursor: pointer;
+}
+
+.categoryDropdownPicture {
+    height: 162px;
+}
+
+#transactionCategory {
+    text-transform: capitalize;
+}
+
+
+/*For DatePicker */
+
+.table-condensed>tbody>tr>td,
+.table-condensed>tbody>tr>th,
+.table-condensed>tfoot>tr>td,
+.table-condensed>tfoot>tr>th,
+.table-condensed>thead>tr>td,
+.table-condensed>thead>tr>th {
+    padding: 15px;
+    font-size: 2vw;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.today {
+    background-image: none !important;
+    background-color: #999999 !important;
+    color: white !important;
+}
+
+.active {
+    background-image: none !important;
+    background-color: #e74c3c !important;
+    color: white !important;
+}
+
+#iphoneDisplay {
+    height: 736px !important;
+    width: 414px !important;
+}
+
+#key-board {
+    width: 100%;
+    font-size: 1.5vw;
+    border: 1px solid gray;
+    padding: 5px 10px;
+}

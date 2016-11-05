@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <!--Stylesheets-->
+    <link href="lib/bootstrap/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/toastr/build/toastr.css" rel="stylesheet">
+    <link href="lib/style.css" rel="stylesheet">
+
+    <!--javascript libraries-->
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/toastr/toastr.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<div id="mstop" class="col-xs-12">
+    <img id="skillDiv" style="opacity:0;z-index:100">
+    <img id="charDiv" src="msAssets/char/char.png">
+    <img id="mobDiv" style="opacity:0;">
+</div>
+
+<div id="msbtm" class="col-xs-12">
+    <button type="button" class="btn btn-block btn-warning col-xs-12" id="appearCue">
+        <span style="font-size:6vw;">Monster Appear</span>
+    </button>
+    <button type="button" class="btn btn-block btn-success col-xs-12" id="attackCue">
+        <span style="font-size:6vw;">Attack</span>
+    </button>
+    <button type="button" class="btn btn-block btn-danger col-xs-12" id="killCue">
+        <span style="font-size:6vw;">Kill</span>
+    </button>
+</div>
+
+<script>
+    toastr.options = {
+        "closeButton": false,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": true,
+        "positionClass": "toast-top-center",
+        "preventDuplicates": false,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "4000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    }
+    $(document).ready(function () {
+        console.log("ready!");
+    });
+
+    $("#appearCue").click(function () {
+        $("#charDiv").css('opacity', 0);
+        $("#mobDiv").attr("src", "msAssets/mob/mushroom.png");
+        $("#mobDiv").css('opacity', 1);
+    });
+
+    $("#attackCue").click(function () {
+        $("#skillDiv").attr("src", "msAssets/skills/0swordBasic.gif");
+        $("#skillDiv").css('opacity', 1);
+        setTimeout(function () {
+            $("#mobDiv").attr("src", "msAssets/mob/mushroom-hit.png");
+        }, 500);
+    });
+
+    $("#killCue").click(function () {
+        $("#skillDiv").css('opacity', 0);
+        $("#mobDiv").attr("src", "msAssets/mob/mushroom-death.gif");
+        toastr.warning('You have gained 20 xp.');
+        setTimeout(function () {
+            $("#mobDiv").attr("src", "");
+            $("#charDiv").css('opacity', 1);
+            $("#mobDiv").css('opacity', 0);
+        }, 1000);
+    });
+</script>
+
+</html>
