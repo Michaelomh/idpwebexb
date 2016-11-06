@@ -67,6 +67,19 @@ $("#transactionCategoryDiv").click(function () {
     }
 });
 
+$("#backButton").click(function() {
+    console.log("go back");
+})
+
+$("#submitButton").click(function() {
+    console.log("submittng");
+    //get whatever is in the keyboard
+    var currentKey = $("#key-board").val().replace(/\s/g,'');
+    console.log(currentKey);
+    //send to home with some shit inside
+    
+})
+
 //***************************
 // Symbol Adding Function
 //***************************

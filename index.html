@@ -27,13 +27,13 @@
             <i class="fa fa-bars" aria-hidden="true"></i>
         </div>
         <div class="col-xs-2">
-            <i class="fa fa-caret-left" aria-hidden="true"></i>
+            <i class="fa fa-caret-left" aria-hidden="true" style="text-align: left;font-size: 1.4em;"></i>
         </div>
         <div class="col-xs-4">
-            <span id="currentDate">06/11/16</span>
+            <span id="currentDate">6/11/16</span>
         </div>
         <div class="col-xs-2">
-            <i class="fa fa-caret-right" aria-hidden="true"></i>
+            <i class="fa fa-caret-right" aria-hidden="true" style="text-align: right; font-size: 1.4em;"></i>
         </div>
         <div class="col-xs-2">
             <i class="fa fa-pie-chart" aria-hidden="true"></i>
@@ -42,17 +42,75 @@
 
     <!--2nd Bar-->
     <div id="TwoBar">
-        <span>Today's Spending</span>
-        <div id="spendingBar"></div>
+        <div id=TwoBarTitle>
+            <span>Today's Spending</span>
+        </div>
+        <div id="spendingBar">
+            <span>$100</span>
+        </div>
+        <div id=TwoBarBottom>
+            <span>Remaining</span>
+        </div>
+        
     </div>
 
     <!--3nd Bar-->
-    <div>
-
+    <div id="ThreeBar">
+        <table id="ThreeBarTable">
+            <tr>
+                <td rowspan="2" class="col-xs-2" style="padding:0px;text-align:left;font-size: 60px;font-weight: bold;">6</td>
+                <td class="col-xs-7" style="padding:0px;font-family:'raleway';text-align:left;font-size:32px;">Sunday</td>
+                <td rowspan="2" class="col-xs-3" style="padding:0px;text-align:right;font-size: 60px;font-weight: bold;">$0</td>
+            </tr>
+            <tr>
+                <td style="padding:0px;font-family:'raleway';text-align:left;font-size:32px;">November 2016</td>
+            </tr>
+        </table>
     </div>
 
     <!--Tranaction Bar-->
-    <div>
+    <div style="padding-top:15px;float:left;">
+        <table class="transactionTable">
+            <tr>
+                <td rowspan="2" class="col-xs-2">
+                    <img src="msAssets/foodCat.png" class="img-responsive;" style="height:120px;">
+                </td>
+                <td class="col-xs-7" style="font-size:38px;font-weight:bold;vertical-align: bottom;">Food</td>
+                <td rowspan="2" class="col-xs-3"
+                    style="font-family:'Roboto';font-size:60px; font-weight:bold;text-align:right;">$0</td>
+            </tr>
+            <tr>
+                <td style="padding-left:15px;font-size:32px;color:gray;    vertical-align:top;">Starbucks</td>
+            </tr>
+        </table>
+        
+        <table class="transactionTable">
+            <tr>
+                <td rowspan="2" class="col-xs-2">
+                    <img src="msAssets/foodCat.png" class="img-responsive;" style="height:120px;">
+                </td>
+                <td class="col-xs-7" style="font-size:38px;font-weight:bold;vertical-align: bottom;">Food</td>
+                <td rowspan="2" class="col-xs-3"
+                    style="font-family:'Roboto';font-size:60px; font-weight:bold;text-align:right;">$0</td>
+            </tr>
+            <tr>
+                <td style="padding-left:15px;font-size:32px;color:gray;    vertical-align:top;">Starbucks</td>
+            </tr>
+        </table>
+        
+        <table class="transactionTable">
+            <tr>
+                <td rowspan="2" class="col-xs-2">
+                    <img src="msAssets/foodCat.png" class="img-responsive;" style="height:120px;">
+                </td>
+                <td class="col-xs-7" style="font-size:38px;font-weight:bold;vertical-align: bottom;">Food</td>
+                <td rowspan="2" class="col-xs-3"
+                    style="font-family:'Roboto';font-size:60px; font-weight:bold;text-align:right;">$0</td>
+            </tr>
+            <tr>
+                <td style="padding-left:15px;font-size:32px;color:gray;    vertical-align:top;">Starbucks</td>
+            </tr>
+        </table>
     </div>
 
     <!--Plus Sign-->
