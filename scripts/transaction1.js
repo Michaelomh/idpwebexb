@@ -74,25 +74,25 @@ $("#transactionCategoryDiv").click(function () {
 $("#addDollarSign").click(function () {
     var currentKey = $("#key-board").val();
     $("#key-board").val(currentKey + "$");
-    $("#key-board").focus();
+    document.getElementById("key-board").focus();
 });
 
 $("#addHashSign").click(function () {
     var currentKey = $("#key-board").val();
     $("#key-board").val(currentKey + "#");
-    $("#key-board").focus();
+    document.getElementById("key-board").focus();
 });
 
 $("#addAtSign").click(function () {
     var currentKey = $("#key-board").val();
     $("#key-board").val(currentKey + "@");
-    $("#key-board").focus();
+    document.getElementById("key-board").focus();
 });
 
 $("#addExclaimSign").click(function () {
     var currentKey = $("#key-board").val();
     $("#key-board").val(currentKey + "!");
-    $("#key-board").focus();
+    document.getElementById("key-board").focus();
 });
 
 
