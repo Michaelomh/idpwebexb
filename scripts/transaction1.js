@@ -3,6 +3,7 @@
 //***************************
 
 $(document).ready(function () {
+    
     setTimeout(startup, 1000);
 
     toastr.options = {
@@ -31,26 +32,26 @@ $(document).ready(function () {
     });
 
 
-    $('#keyboard').keyboard({
-        alwaysOpen: true,
-        layout: 'custom',
-        customLayout: {
-            'normal': [
-                  '` 1 2 3 4 5 6 7 8 9 0 - = {bksp}',
-                  '{tab} q w e r t y u i o p [ ] \\',
-                  'a s d f g h j k l ; \' {enter}',
-                  '{shift} z x c v b n m , . / {shift}',
-                  '{space} '
-                ],
-            'shift': [
-                  '~ ! @ # $ % ^ & * ( ) _ + {bksp}',
-                  '{tab} Q W E R T Y U I O P { } |',
-                  'A S D F G H J K L : " {enter}',
-                  '{shift} Z X C V B N M < > ? {shift}',
-                  ' {space}'
-                ]
-        }
-    });
+//    $('#keyboard').keyboard({
+//        alwaysOpen: true,
+//        layout: 'custom',
+//        customLayout: {
+//            'normal': [
+//                  '` 1 2 3 4 5 6 7 8 9 0 - = {bksp}',
+//                  '{tab} q w e r t y u i o p [ ] \\',
+//                  'a s d f g h j k l ; \' {enter}',
+//                  '{shift} z x c v b n m , . / {shift}',
+//                  '{space} '
+//                ],
+//            'shift': [
+//                  '~ ! @ # $ % ^ & * ( ) _ + {bksp}',
+//                  '{tab} Q W E R T Y U I O P { } |',
+//                  'A S D F G H J K L : " {enter}',
+//                  '{shift} Z X C V B N M < > ? {shift}',
+//                  ' {space}'
+//                ]
+//        }
+//    });
 
 });
 
@@ -71,23 +72,23 @@ $("#transactionCategoryDiv").click(function () {
 //***************************
 
 $("#addDollarSign").click(function () {
-    var currentKey = $(".ui-keyboard-preview-wrapper input").val();
-    $(".ui-keyboard-preview-wrapper input").val(currentKey + "$");
+    var currentKey = $("#key-board").val();
+    $("#key-board").val(currentKey + "$");
 });
 
 $("#addHashSign").click(function () {
-    var currentKey = $(".ui-keyboard-preview-wrapper input").val();
-    $(".ui-keyboard-preview-wrapper input").val(currentKey + "#");
+    var currentKey = $("#key-board").val();
+    $("#key-board").val(currentKey + "#");
 });
 
 $("#addAtSign").click(function () {
-    var currentKey = $(".ui-keyboard-preview-wrapper input").val();
-    $(".ui-keyboard-preview-wrapper input").val(currentKey + "@");
+    var currentKey = $("#key-board").val();
+    $("#key-board").val(currentKey + "@");
 });
 
 $("#addExclaimSign").click(function () {
-    var currentKey = $(".ui-keyboard-preview-wrapper input").val();
-    $(".ui-keyboard-preview-wrapper input").val(currentKey + "!");
+    var currentKey = $("#key-board").val();
+    $("#key-board").val(currentKey + "!");
 });
 
 
@@ -96,18 +97,9 @@ $("#addExclaimSign").click(function () {
 //***************************
 function startup() {
 
-    $(".ui-keyboard-preview-wrapper input").on({
-        keydown: function (e) {
-            console.log("ON ON ON ");
-            if (e.which === 32)
-                return false;
-        }
-    });
-
-
     //$a #b @c !d
-    $(".ui-keyboard-preview-wrapper input").keyup(function () {
-        var currentKey = $(".ui-keyboard-preview-wrapper input").val();
+    $("#key-board").keyup(function () {
+        var currentKey = $("#key-board").val();
         var list = currentKey.split(" ");
         console.log(list);
         for (var i = 0; i < list.length; i++) {
@@ -148,43 +140,43 @@ function startup() {
                 //cat picture change + text
                 switch (cat) {
                 case "food":
-                    $("#transactionCategory").text(cat);
+                    $("#transactionCategory").val(cat);
                     $("#transactionCateogryImg").attr("src", "msAssets/foodCat.png");
                     break;
                 case "entertainment":
-                    $("#transactionCategory").text(cat);
+                    $("#transactionCategory").val(cat);
                     $("#transactionCateogryImg").attr("src", "msAssets/entertainmentCat.png");
                     break;
                 case "household":
-                    $("#transactionCategory").text(cat);
+                    $("#transactionCategory").val(cat);
                     $("#transactionCateogryImg").attr("src", "msAssets/housecategory.png");
                     break;
                 case "fashion":
-                    $("#transactionCategory").text(cat);
+                    $("#transactionCategory").val(cat);
                     $("#transactionCateogryImg").attr("src", "msAssets/shirtCategory.png");
                     break;
                 case "transport":
-                    $("#transactionCategory").text(cat);
+                    $("#transactionCategory").val(cat);
                     $("#transactionCateogryImg").attr("src", "msAssets/transportCategory.png");
                     break;
                 case "bills":
-                    $("#transactionCategory").text(cat);
+                    $("#transactionCategory").val(cat);
                     $("#transactionCateogryImg").attr("src", "msAssets/billsCategory.png");
                     break;
                 case "others":
-                    $("#transactionCategory").text(cat);
+                    $("#transactionCategory").val(cat);
                     $("#transactionCateogryImg").attr("src", "msAssets/OthersCategory.png");
                     break;
                 case "extra1":
-                    $("#transactionCategory").text(cat);
+                    $("#transactionCategory").val(cat);
                     $("#transactionCateogryImg").attr("src", "msAssets/OthersCategory.png");
                     break;
                 case "extra2":
-                    $("#transactionCategory").text(cat);
+                    $("#transactionCategory").val(cat);
                     $("#transactionCateogryImg").attr("src", "msAssets/OthersCategory.png");
                     break;
                 default:
-                    $("#transactionCategory").text("Category");
+                    $("#transactionCategory").val("Category");
                     $("#transactionCateogryImg").attr("src", "msAssets/transactionCategory.png");
                     break;
                 }
@@ -289,7 +281,7 @@ function startup() {
 //***************************
 $("#transactionAmountInput").keyup(function () {
     var amount = $("#transactionAmountInput").val();
-    var currentKey = $(".ui-keyboard-preview-wrapper input").val();
+    var currentKey = $("#key-board").val();
     //if $ do not exist, put $ inside the top
     if (amount.length == 1 && amount.indexOf("$") > 0) { //the last digit = $
         $("#transactionAmountInput").val("");
@@ -299,13 +291,13 @@ $("#transactionAmountInput").keyup(function () {
     }
 
     var cashMoney = amount.substring(1, amount.length);
-    console.log(cashMoney);
+//    console.log(cashMoney);
 
     if ($.isNumeric(cashMoney) || (cashMoney.length == 0)) {
         currentKeyCheckerAmount(currentKey, amount);
     }
 
-    /*$(".ui-keyboard-preview-wrapper input").val(currentKey + " " + amount);*/
+    /*$("#key-board").val(currentKey + " " + amount);*/
 });
 
 function currentKeyCheckerAmount(currentKey, toAdd) {
@@ -318,12 +310,12 @@ function currentKeyCheckerAmount(currentKey, toAdd) {
     console.log(list);
     for (var i = 0; i < list.length; i++) {
         if (list[i].charAt(0) == "$") {
-            console.log("true");
+//            console.log("true");
             list.splice(i, 1);
             list.splice(i, 0, toAdd);
             checker = true;
         } else if (list[i] == "") {
-            console.log("destroy");
+//            console.log("destroy");
             list.splice(i, 1);
         }
     }
@@ -336,17 +328,17 @@ function currentKeyCheckerAmount(currentKey, toAdd) {
         toReturn += list[i] + " ";
     }
 
-    console.log(list);
-    console.log(toReturn);
-    $(".ui-keyboard-preview-wrapper input").val(toReturn);
+//    console.log(list);
+//    console.log(toReturn);
+    $("#key-board").val(toReturn);
 }
 
 
 //*****************************
 //Category to keyboard - START
 //food - 1
-$("#catFoodSelect").click(function () {
-    var currentKey = $(".ui-keyboard-preview-wrapper input").val();
+/*$("#catFoodSelect").click(function () {
+    var currentKey = $("#key-board").val();
     currentCatChecker(currentKey, "#Food");
     $('#transactionCategory').text("Food");
     $("#transactionCateogryImg").attr("src", "msAssets/foodCat.png");
@@ -357,7 +349,7 @@ $("#catFoodSelect").click(function () {
 
 //entertainment - 2
 $("#catEntertainmentSelect").click(function () {
-    var currentKey = $(".ui-keyboard-preview-wrapper input").val();
+    var currentKey = $("#key-board").val();
     currentCatChecker(currentKey, "#Entertainment");
     $("#transactionCateogryImg").attr("src", "msAssets/entertainmentCat.png");
     $('#transactionCategory').text("Entertainment");
@@ -368,7 +360,7 @@ $("#catEntertainmentSelect").click(function () {
 
 //household - 3
 $("#catHouseSelect").click(function () {
-    var currentKey = $(".ui-keyboard-preview-wrapper input").val();
+    var currentKey = $("#key-board").val();
     currentCatChecker(currentKey, "#Household");
     $('#transactionCategory').text("Household");
     $("#transactionCateogryImg").attr("src", "msAssets/housecategory.png");
@@ -379,7 +371,7 @@ $("#catHouseSelect").click(function () {
 
 //fashion - 4
 $("#catFashionSelect").click(function () {
-    var currentKey = $(".ui-keyboard-preview-wrapper input").val();
+    var currentKey = $("#key-board").val();
     currentCatChecker(currentKey, "#Fashion");
     $('#transactionCategory').text("Fashion");
     $("#transactionCateogryImg").attr("src", "msAssets/shirtCategory.png");
@@ -390,7 +382,7 @@ $("#catFashionSelect").click(function () {
 
 //transport - 5
 $("#catTransportSelect").click(function () {
-    var currentKey = $(".ui-keyboard-preview-wrapper input").val();
+    var currentKey = $("#key-board").val();
     currentCatChecker(currentKey, "#Transport");
     $('#transactionCategory').text("Transport");
     $("#transactionCateogryImg").attr("src", "msAssets/transportCategory.png");
@@ -401,7 +393,7 @@ $("#catTransportSelect").click(function () {
 
 //Bills - 6
 $("#catBillsSelect").click(function () {
-    var currentKey = $(".ui-keyboard-preview-wrapper input").val();
+    var currentKey = $("#key-board").val();
     currentCatChecker(currentKey, "#Bills");
     $('#transactionCategory').text("Bills");
     $("#transactionCateogryImg").attr("src", "msAssets/billsCategory.png");
@@ -412,7 +404,7 @@ $("#catBillsSelect").click(function () {
 
 //Others - 7
 $("#catOthersSelect").click(function () {
-    var currentKey = $(".ui-keyboard-preview-wrapper input").val();
+    var currentKey = $("#key-board").val();
     currentCatChecker(currentKey, "#Others");
     $('#transactionCategory').text("Others");
     $("#transactionCateogryImg").attr("src", "msAssets/OthersCategory.png");
@@ -423,7 +415,7 @@ $("#catOthersSelect").click(function () {
 
 //extra1 - 8
 $("#catEx1Select").click(function () {
-    var currentKey = $(".ui-keyboard-preview-wrapper input").val();
+    var currentKey = $("#key-board").val();
     currentCatChecker(currentKey, "#Extra1");
     $('#transactionCategory').text("Extra1");
     $("#transactionCateogryImg").attr("src", "msAssets/OthersCategory.png");
@@ -434,14 +426,14 @@ $("#catEx1Select").click(function () {
 
 //extra2 - 9
 $("#catEx2Select").click(function () {
-    var currentKey = $(".ui-keyboard-preview-wrapper input").val();
+    var currentKey = $("#key-board").val();
     currentCatChecker(currentKey, "#Extra2");
     $('#transactionCategory').text("Extra2");
     $("#transactionCateogryImg").attr("src", "msAssets/OthersCategory.png");
     $("#transactionCatDropdown").hide('slide', {
         direction: "up"
     }, 500);
-});
+});*/
 
 function currentCatChecker(currentKey, toAdd) {
     //check the currentKey if "#" exist.
@@ -468,7 +460,7 @@ function currentCatChecker(currentKey, toAdd) {
     }
 
     console.log(toReturn);
-    $(".ui-keyboard-preview-wrapper input").val(toReturn);
+    $("#key-board").val(toReturn);
 }
 
 //Category to Keyboard - END
@@ -479,7 +471,7 @@ function currentCatChecker(currentKey, toAdd) {
 $("#transactionDate").change(function () {
     var date = $("#transactionDate").val();
     date = date.substring(0, date.length - 3);
-    var currentKey = $(".ui-keyboard-preview-wrapper input").val();
+    var currentKey = $("#key-board").val();
     currentDateChecker(currentKey, date);
 });
 
@@ -509,7 +501,7 @@ function currentDateChecker(currentKey, toAdd) {
     }
 
     console.log(toReturn);
-    $(".ui-keyboard-preview-wrapper input").val(toReturn);
+    $("#key-board").val(toReturn);
 }
 //Date to Keyboard - END
 //********************************
@@ -519,7 +511,7 @@ function currentDateChecker(currentKey, toAdd) {
 //Notes to Keyboard - END
 $("#transactionNotes").keyup(function () {
     var note = $("#transactionNotes").val();
-    var currentKey = $(".ui-keyboard-preview-wrapper input").val();
+    var currentKey = $("#key-board").val();
     currentNoteChecker(currentKey, note);
 });
 
@@ -549,7 +541,7 @@ function currentNoteChecker(currentKey, toAdd) {
     }
 
     //console.log(toReturn);
-    $(".ui-keyboard-preview-wrapper input").val(toReturn);
+    $("#key-board").val(toReturn);
 }
 //Notes to Keyboard - END
 //********************************

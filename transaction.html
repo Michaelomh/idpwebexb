@@ -21,109 +21,109 @@
 </head>
 
 <body>
-    <div id="iphoneDisplay">
-        <div class="topDiv">
-            <span class="glyphicon glyphicon-arrow-left glyphiconTopLeft" aria-hidden="true" style="color:white;float:left;"></span>
-            <span class="topTitle">Add Transaction</span>
-            <span class="glyphicon glyphicon-floppy-disk glyphiconTopRight" aria-hidden="true" style="color:white;float:right;"></span>
-        </div>
-        <div class="col-xs-12" id="transactionMainDiv">
-            <div class="col-xs-12 transactionMainCol">
-                <div class="col-xs-3">
-                    <img class="img-responsive" src="msAssets/transactionDollar.png">
-                </div>
-                <div class="col-xs-9">
-                    <input type="text" class="transactionFormField" id="transactionAmountInput" placeholder="Amount" disabled>
-                </div>
+    <div class="topDiv">
+        <span class="glyphicon glyphicon-arrow-left glyphiconTopLeft" aria-hidden="true" style="color:white;float:left;"></span>
+        <span class="topTitle">Add Transaction</span>
+        <span class="glyphicon glyphicon-floppy-disk glyphiconTopRight" aria-hidden="true" style="color:white;float:right;"></span>
+    </div>
+    <div class="col-xs-12" id="transactionMainDiv">
+        <div class="col-xs-12 transactionMainCol">
+            <div class="col-xs-2">
+                <img class="img-responsive" src="msAssets/transactionDollar.png">
             </div>
-
-            <div class="col-xs-12 transactionMainCol" id="transactionCategoryDiv">
-                <div class="col-xs-3">
-                    <img id="transactionCateogryImg" class="img-responsive" src="msAssets/transactionCategory.png">
-                </div>
-                <div class="col-xs-9">
-                    <input type="text" class="transactionFormField" id="transactionAmountInput" placeholder="Category" disabled>
-                </div>
-            </div>
-
-            <div class="col-xs-12 transactionMainCol">
-                <div class="col-xs-3">
-                    <img class="img-responsive" src="msAssets/transactionCalendar.png">
-                </div>
-                <div class="col-xs-9">
-                    <input type="text" class="datepicker transactionFormField" placeholder="Date" id="transactionDate" disabled>
-                </div>
-            </div>
-
-            <div class="col-xs-12 transactionMainCol">
-                <div class="col-xs-3">
-                    <img class="img-responsive" src="msAssets/transactionPencil.png">
-                </div>
-                <div class="col-xs-9">
-                    <input type="text" class="transactionFormField" id="transactionNotes" placeholder="Notes" disabled>
-                </div>
+            <div class="col-xs-9">
+                <input type="text" class="transactionFormField" id="transactionAmountInput" placeholder="Amount" disabled>
             </div>
         </div>
-        <div class="col-xs-12" id="transactionKeyboardDiv" style="">
-            <div class="col-xs-3 transactionKeyboardSymbol" id="addDollarSign">
-                <span>$: Amt</span>
+
+        <div class="col-xs-12 transactionMainCol" id="transactionCategoryDiv">
+            <div class="col-xs-2">
+                <img id="transactionCateogryImg" class="img-responsive" src="msAssets/transactionCategory.png">
             </div>
-            <div class="col-xs-3 transactionKeyboardSymbol" id="addHashSign">
-                <span>#: Cat</span>
+            <div class="col-xs-9">
+                <input type="text" class="transactionFormField" id="transactionCategory" placeholder="Category" disabled>
             </div>
-            <div class="col-xs-3 transactionKeyboardSymbol" id="addAtSign">
-                <span>@: Date</span>
-            </div>
-            <div class="col-xs-3 transactionKeyboardSymbol" id="addExclaimSign">
-                <span>!: Note</span>
-            </div>
-            <input id="key-board" type="text">
         </div>
-        <div id="transactionCatDropdown" class="col-xs-8 col-xs-push-3" style="opacity:0;">
-            <div class="col-xs-4 categoryDropdownDiv" id="catFoodSelect">
-                <img class="img-responsive categoryDropdownPicture" src="msAssets/food.png">
-            </div>
-            <div class="col-xs-4 categoryDropdownDiv" id="catEntertainmentSelect">
-                <img class="img-responsive categoryDropdownPicture" src="msAssets/entertainment.png">
-            </div>
 
-            <div class="col-xs-4 categoryDropdownDiv" style="border-right:none;" id="catHouseSelect">
-                <img class="img-responsive categoryDropdownPicture" src="msAssets/house.png">
+        <div class="col-xs-12 transactionMainCol">
+            <div class="col-xs-2">
+                <img class="img-responsive" src="msAssets/transactionCalendar.png">
             </div>
-
-            <div class="col-xs-4 categoryDropdownDiv" id="catFashionSelect">
-                <img class="img-responsive categoryDropdownPicture" src="msAssets/shirt.png">
+            <div class="col-xs-9">
+                <input type="text" class="datepicker transactionFormField" placeholder="Date" id="transactionDate" disabled>
             </div>
+        </div>
 
-            <div class="col-xs-4 categoryDropdownDiv" id="catTransportSelect">
-                <img class="img-responsive categoryDropdownPicture" src="msAssets/transport.png">
+        <div class="col-xs-12 transactionMainCol">
+            <div class="col-xs-2">
+                <img class="img-responsive" src="msAssets/transactionPencil.png">
             </div>
-
-            <div class="col-xs-4 categoryDropdownDiv" style="border-right:none;" id="catBillsSelect">
-                <img class="img-responsive categoryDropdownPicture" src="msAssets/bills.png">
+            <div class="col-xs-9">
+                <input type="text" class="transactionFormField" id="transactionNotes" placeholder="Notes" disabled>
             </div>
-
-            <div class="col-xs-4 categoryDropdownDiv" style="border-bottom: none;" id="catOthersSelect">
-                <img class="img-responsive categoryDropdownPicture" src="msAssets/others.png">
-            </div>
-
-            <div class="col-xs-4 categoryDropdownDiv" style="border-bottom: none;" id="catEx1Select">
-                <img class="img-responsive categoryDropdownPicture" src="msAssets/others.png">
-            </div>
-
-            <div class="col-xs-4 categoryDropdownDiv" style="border-right:none;border-bottom:none;" id="catEx2Select">
-                <img class="img-responsive categoryDropdownPicture" src="msAssets/others.png">
-            </div>
-
-
         </div>
     </div>
+    <div class="col-xs-12" id="transactionKeyboardDiv" style="">
+        <div class="col-xs-3 transactionKeyboardSymbol" id="addDollarSign">
+            <span>$: Amt</span>
+        </div>
+        <div class="col-xs-3 transactionKeyboardSymbol" id="addHashSign">
+            <span>#: Cat</span>
+        </div>
+        <div class="col-xs-3 transactionKeyboardSymbol" id="addAtSign">
+            <span>@: Date</span>
+        </div>
+        <div class="col-xs-3 transactionKeyboardSymbol" id="addExclaimSign">
+            <span>!: Note</span>
+        </div>
+        <input id="key-board" type="text">
+    </div>
+<!--
+    <div id="transactionCatDropdown" class="col-xs-8 col-xs-push-3" style="opacity:0;">
+        <div class="col-xs-4 categoryDropdownDiv" id="catFoodSelect">
+            <img class="img-responsive categoryDropdownPicture" src="msAssets/food.png">
+        </div>
+        <div class="col-xs-4 categoryDropdownDiv" id="catEntertainmentSelect">
+            <img class="img-responsive categoryDropdownPicture" src="msAssets/entertainment.png">
+        </div>
+
+        <div class="col-xs-4 categoryDropdownDiv" style="border-right:none;" id="catHouseSelect">
+            <img class="img-responsive categoryDropdownPicture" src="msAssets/house.png">
+        </div>
+
+        <div class="col-xs-4 categoryDropdownDiv" id="catFashionSelect">
+            <img class="img-responsive categoryDropdownPicture" src="msAssets/shirt.png">
+        </div>
+
+        <div class="col-xs-4 categoryDropdownDiv" id="catTransportSelect">
+            <img class="img-responsive categoryDropdownPicture" src="msAssets/transport.png">
+        </div>
+
+        <div class="col-xs-4 categoryDropdownDiv" style="border-right:none;" id="catBillsSelect">
+            <img class="img-responsive categoryDropdownPicture" src="msAssets/bills.png">
+        </div>
+
+        <div class="col-xs-4 categoryDropdownDiv" style="border-bottom: none;" id="catOthersSelect">
+            <img class="img-responsive categoryDropdownPicture" src="msAssets/others.png">
+        </div>
+
+        <div class="col-xs-4 categoryDropdownDiv" style="border-bottom: none;" id="catEx1Select">
+            <img class="img-responsive categoryDropdownPicture" src="msAssets/others.png">
+        </div>
+
+        <div class="col-xs-4 categoryDropdownDiv" style="border-right:none;border-bottom:none;" id="catEx2Select">
+            <img class="img-responsive categoryDropdownPicture" src="msAssets/others.png">
+        </div>
+
+
+    </div>
+-->
 
 </body>
 
 <footer>
     <!--js scripts-->
-    <script src="scripts/transaction.js"></script>
+    <script src="scripts/transaction1.js"></script>
 
 </footer>
 

@@ -38,26 +38,66 @@ body {
     background-color: #e74c3c;
     text-align: center;
     padding: 20px;
+    height: 8%;
+    font-size: 50px;
+    color: white;
+    font-family: 'Roboto'
 }
 
 .topTitle {
-    font-size: 2vw;
+    font-size: 1em;
     color: white;
     font-weight: bold;
+    font-family: 'raleway';
 }
 
 .glyphiconTopLeft {
     color: white;
     float: left;
-    font-size: 2vw;
-        margin-top: 6px;
+    font-size: 1em;
+    margin-top: 9px;
+    margin-left: 20px;
 }
 
 .glyphiconTopRight {
     color: white;
     float: right;
-    font-size: 2vw;
-        margin-top: 7px;
+    font-size: 1em;
+    margin-top: 14px;
+    margin-right: 20px;
+}
+
+.col-xs-2 {
+    width: 20% !important;
+}
+
+.col-xs-9 {
+    width: 80% !important;
+}
+
+
+/*************************
+1.0 Index/Home Page
+**************************/
+
+#plusSign {
+    font-size: 70px;
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    background: red;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+}
+
+#TwoBar {
+    float: left;
+    height: 10%;
+    font-size: 40px;
 }
 
 
@@ -292,9 +332,10 @@ body {
     font-weight: normal;
     color: #454545;
     text-align: center;
-    font-size: 1.2vw;
-    padding: 5px;
+    font-size: 3.5vw;
+    padding: 10px;
     font-weight: bold;
+    height: 62px;
 }
 
 .ui-keyboard-preview-wrapper > input {
@@ -305,9 +346,11 @@ body {
     width: 100%;
     border: none;
     color: #e74c3c;
-    font-size: 1.5vw;
+    font-size: 4em;
     font-weight: bold;
-    line-height: 58px;
+    line-height: 64px;
+    height: 120px;
+    padding-left: 30px !important;
 }
 
 .transactionFormField:focus {
@@ -374,7 +417,8 @@ body {
 
 #key-board {
     width: 100%;
-    font-size: 1.5vw;
+    font-size: 4.5vw;
     border: 1px solid gray;
-    padding: 5px 10px;
+    padding: 15px 20px;
+    height: 74px;
 }
