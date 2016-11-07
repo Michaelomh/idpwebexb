@@ -19,7 +19,7 @@ $(document).ready(function () {
         "positionClass": "toast-top-center",
         "preventDuplicates": true,
         "onclick": null,
-        "showDuration": "300",
+        "showDuration": "1500",
         "hideDuration": "1000",
         "timeOut": "1500",
         "extendedTimeOut": "1000",
@@ -82,9 +82,20 @@ $("#submitButton").click(function () {
     var transCat = $("#transactionCategory").val();
     var transDate = $("#transactionDate").val();
     var transNotes = $("#transactionNotes").val();
-    
-    //send to home with some shit inside
-    window.location = "index.html?Amt=" + transAmt + "&Cat=" + transCat + "&Notes=" + transNotes;
+
+    //check if Amt, Cat of Date is empty.
+    if (transAmt.length == 0) {
+        toastr.error("Your Amount field is empty, did you include the '$' tag and a space in your input? eg.$14");
+    } else if (transCat.length == 0) {
+        toastr.error("Your Category field is empty, did you include the '#' tag and a space in your input? eg.#Bills ");
+    } else if (transDate.length == 0) {
+        toastr.error("Your Date is empty, did you include the '@' tag and a space in your input? eg.@today ");
+    } else {
+        //send to home with some shit inside
+        window.location = "index.html?Amt=" + transAmt + "&Cat=" + transCat + "&Notes=" + transNotes;
+    }
+
+
 })
 
 //***************************
