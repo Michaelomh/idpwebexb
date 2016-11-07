@@ -19,7 +19,7 @@ $(document).ready(function () {
         "positionClass": "toast-top-center",
         "preventDuplicates": true,
         "onclick": null,
-        "showDuration": "1500",
+        "showDuration": "5000",
         "hideDuration": "1000",
         "timeOut": "1500",
         "extendedTimeOut": "1000",
