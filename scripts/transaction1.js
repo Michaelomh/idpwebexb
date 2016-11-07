@@ -3,7 +3,12 @@
 //***************************
 
 $(document).ready(function () {
-    
+
+    //get the lowest, then the 2nd.
+    //get the 2nd, then the 3rd
+    //get the 3rd, then the highest
+    //get the highest, then the length  
+
     setTimeout(startup, 1000);
 
     toastr.options = {
@@ -32,26 +37,26 @@ $(document).ready(function () {
     });
 
 
-//    $('#keyboard').keyboard({
-//        alwaysOpen: true,
-//        layout: 'custom',
-//        customLayout: {
-//            'normal': [
-//                  '` 1 2 3 4 5 6 7 8 9 0 - = {bksp}',
-//                  '{tab} q w e r t y u i o p [ ] \\',
-//                  'a s d f g h j k l ; \' {enter}',
-//                  '{shift} z x c v b n m , . / {shift}',
-//                  '{space} '
-//                ],
-//            'shift': [
-//                  '~ ! @ # $ % ^ & * ( ) _ + {bksp}',
-//                  '{tab} Q W E R T Y U I O P { } |',
-//                  'A S D F G H J K L : " {enter}',
-//                  '{shift} Z X C V B N M < > ? {shift}',
-//                  ' {space}'
-//                ]
-//        }
-//    });
+    //    $('#keyboard').keyboard({
+    //        alwaysOpen: true,
+    //        layout: 'custom',
+    //        customLayout: {
+    //            'normal': [
+    //                  '` 1 2 3 4 5 6 7 8 9 0 - = {bksp}',
+    //                  '{tab} q w e r t y u i o p [ ] \\',
+    //                  'a s d f g h j k l ; \' {enter}',
+    //                  '{shift} z x c v b n m , . / {shift}',
+    //                  '{space} '
+    //                ],
+    //            'shift': [
+    //                  '~ ! @ # $ % ^ & * ( ) _ + {bksp}',
+    //                  '{tab} Q W E R T Y U I O P { } |',
+    //                  'A S D F G H J K L : " {enter}',
+    //                  '{shift} Z X C V B N M < > ? {shift}',
+    //                  ' {space}'
+    //                ]
+    //        }
+    //    });
 
 });
 
@@ -67,17 +72,19 @@ $("#transactionCategoryDiv").click(function () {
     }
 });
 
-$("#backButton").click(function() {
+$("#backButton").click(function () {
     console.log("go back");
 })
 
-$("#submitButton").click(function() {
-    console.log("submittng");
+$("#submitButton").click(function () {
     //get whatever is in the keyboard
-    var currentKey = $("#key-board").val().replace(/\s/g,'');
-    console.log(currentKey);
-    //send to home with some shit inside
+    var transAmt = $("#transactionAmountInput").val();
+    var transCat = $("#transactionCategory").val();
+    var transDate = $("#transactionDate").val();
+    var transNotes = $("#transactionNotes").val();
     
+    //send to home with some shit inside
+    window.location = "index.html?Amt=" + transAmt + "&Cat=" + transCat + "&Notes=" + transNotes;
 })
 
 //***************************
@@ -308,7 +315,7 @@ $("#transactionAmountInput").keyup(function () {
     }
 
     var cashMoney = amount.substring(1, amount.length);
-//    console.log(cashMoney);
+    //    console.log(cashMoney);
 
     if ($.isNumeric(cashMoney) || (cashMoney.length == 0)) {
         currentKeyCheckerAmount(currentKey, amount);
@@ -327,12 +334,12 @@ function currentKeyCheckerAmount(currentKey, toAdd) {
     console.log(list);
     for (var i = 0; i < list.length; i++) {
         if (list[i].charAt(0) == "$") {
-//            console.log("true");
+            //            console.log("true");
             list.splice(i, 1);
             list.splice(i, 0, toAdd);
             checker = true;
         } else if (list[i] == "") {
-//            console.log("destroy");
+            //            console.log("destroy");
             list.splice(i, 1);
         }
     }
@@ -345,8 +352,8 @@ function currentKeyCheckerAmount(currentKey, toAdd) {
         toReturn += list[i] + " ";
     }
 
-//    console.log(list);
-//    console.log(toReturn);
+    //    console.log(list);
+    //    console.log(toReturn);
     $("#key-board").val(toReturn);
 }
 
