@@ -8,6 +8,18 @@ $(document).ready(function () {
     //get the 2nd, then the 3rd
     //get the 3rd, then the highest
     //get the highest, then the length  
+    
+    $(".transactionMainCol").click(function() {
+        toastr.error("This feature is disabled, please use the text box to input the Amount, Time, Category and Notes");
+        document.getElementById("key-board").focus();
+    })
+
+    
+    $("#transactionCategoryDiv").click(function() {
+        toastr.error("This feature is disabled, please use the text box to input the Amount, Time, Category and Notes");
+        document.getElementById("key-board").focus();
+    })
+    
 
     setTimeout(startup, 1000);
 
